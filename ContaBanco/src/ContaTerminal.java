@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ContaTerminal {
     public static void main(String[] args) {
 
-        //numero de conta 4digitos,aencia 4 digitos text,nome do cliente, saldo
+        //numero de conta 4 digitos,agência 4 digitos text,nome do cliente, saldo
         
 
         Scanner sc = new Scanner(System.in, "UTF-8");//second argument is the charset
@@ -24,9 +24,10 @@ public class ContaTerminal {
         String numeroAgencia;
         while (true) {
             System.out.println("Digite o numero da agencia: ");
-            numeroAgencia = sc.nextLine();
+            numeroAgencia = sc.nextLine();//get the whole line
             
-            if (!numeroAgencia.matches("\\d{4}")) {
+            
+            if (!numeroAgencia.matches("\\d{4}")) {//pattern matching
                 System.out.println("Número de agência inválido. Tente novamente.");
                 continue;
             }
@@ -41,7 +42,7 @@ public class ContaTerminal {
             try {
                 System.out.println("Digite o saldo: ");
                 saldo = sc.nextDouble();
-                sc.nextLine();//limpar buffer
+                sc.nextLine();//clean buffer
                 break;
                 
             } catch (Exception e) {
