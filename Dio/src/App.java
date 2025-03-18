@@ -6,6 +6,7 @@ public class App {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Digite o seu nome: ");
         String nome = sc.nextLine();
+        //nextline para pegar a string inteira e não só a primeira palavra e next para pegar só a primeira palavra
         System.out.println("Olá " + nome + "!");
         System.out.println("E qual é sua idade?");
         int idade = sc.nextInt();
